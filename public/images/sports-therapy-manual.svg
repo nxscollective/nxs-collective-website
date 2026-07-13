@@ -1,0 +1,53 @@
+<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a sports therapist performing manual therapy on a client's leg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16161A"/>
+      <stop offset="100%" stop-color="#0A0A0B"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="55%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#BCA687" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#BCA687" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#bgGrad3)"/>
+  <rect width="960" height="720" fill="url(#glow3)"/>
+
+  <g stroke="#FFFFFF" stroke-opacity="0.04">
+    <line x1="0" y1="150" x2="960" y2="150"/>
+    <line x1="0" y1="300" x2="960" y2="300"/>
+    <line x1="0" y1="450" x2="960" y2="450"/>
+    <line x1="0" y1="600" x2="960" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="800" y1="0" x2="800" y2="720"/>
+  </g>
+
+  <!-- table -->
+  <rect x="260" y="500" width="460" height="18" rx="2" fill="#1B1B1F" stroke="#3A3A40" stroke-width="1.5"/>
+
+  <!-- client prone, leg raised for therapy -->
+  <g stroke="#7C8794" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <circle cx="310" cy="470" r="20"/>
+    <path d="M330 472 H 560" />
+    <path d="M560 472 L 610 430" />
+    <path d="M610 430 L 640 370" />
+  </g>
+
+  <!-- therapist applying manual pressure to calf -->
+  <g stroke="#C9CDD3" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <circle cx="720" cy="330" r="22"/>
+    <path d="M720 352 V 430" />
+    <path d="M720 380 L 655 400" />
+    <path d="M720 380 L 660 375" />
+    <path d="M720 430 L 690 500" />
+    <path d="M720 430 L 750 500" />
+  </g>
+
+  <circle cx="640" cy="370" r="4" fill="#BCA687"/>
+  <line x1="640" y1="370" x2="560" y2="320" stroke="#BCA687" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="380" y="316" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="2" fill="#BCA687">SOFT TISSUE — CALF</text>
+
+  <text x="40" y="680" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="3" fill="#5C6169">NXS COLLECTIVE — PLACEHOLDER VISUAL</text>
+</svg>
