@@ -24,18 +24,22 @@ const pricingTiers = [
     price: "$169",
     description: "Multi-joint strength testing and left-to-right comparison.",
     highlighted: false,
+    bookingUrl: siteConfig.booking.generalBookingUrl,
   },
   {
     name: "Movement Analysis",
     price: "$129",
     description: "Digital movement assessment and mobility screening.",
     highlighted: false,
+    bookingUrl: siteConfig.booking.generalBookingUrl,
   },
   {
     name: "NXS Complete Movement Healthcheck",
     price: "$249",
-    description: "Strength analysis and movement analysis, combined and interpreted together.",
+    description:
+      "Strength analysis and movement analysis, combined and interpreted together.",
     highlighted: true,
+    bookingUrl: siteConfig.booking.movementHealthcheckBookingUrl,
   },
 ];
 
@@ -124,24 +128,42 @@ export default function MovementHealthcheck() {
             </h3>
             <div className="mt-6 grid gap-4">
               {pricingTiers.map((tier) => (
-                <Card
-                  key={tier.name}
-                  highlighted={tier.highlighted}
-                  className="flex items-center justify-between gap-6"
-                >
-                  <div>
-                    {tier.highlighted && (
-                      <p className="eyebrow mb-2 !text-sand">Recommended · Best Value</p>
-                    )}
-                    <p className="font-display text-base font-semibold text-bone">
-                      {tier.name}
-                    </p>
-                    <p className="mt-1 text-sm text-mist">{tier.description}</p>
-                  </div>
-                  <p className="font-display shrink-0 text-2xl font-semibold text-bone">
-                    {tier.price}
-                  </p>
-                </Card>
+                <a
+  key={tier.name}
+  href={tier.bookingUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card
+    highlighted={tier.highlighted}
+    className="flex items-center justify-between gap-6 transition-transform duration-200 hover:-translate-y-1"
+  >
+    <div>
+      {tier.highlighted && (
+        <p className="eyebrow mb-2 !text-sand">
+          Recommended · Best Value
+        </p>
+      )}
+
+      <p className="font-display text-base font-semibold text-bone">
+        {tier.name}
+      </p>
+
+      <p className="mt-1 text-sm text-mist">
+        {tier.description}
+      </p>
+
+      <p className="mt-3 text-sm font-medium text-sand">
+        Book Assessment →
+      </p>
+    </div>
+
+    <p className="font-display shrink-0 text-2xl font-semibold text-bone">
+      {tier.price}
+    </p>
+  </Card>
+</a>
               ))}
             </div>
           </div>
