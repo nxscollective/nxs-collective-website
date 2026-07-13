@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0b;
+  color: #f5f3ef;
+}
+
+/* Respect users who have asked for reduced motion at the OS level */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible, consistent keyboard focus state across the whole site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #bca687;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: #bca687;
+  color: #0a0a0b;
+}
+
+/* Fine biomechanics grid — a faint, static backdrop texture used on
+   selected sections. Kept as a utility class so it can be dropped onto
+   any <section> without repeating the gradient definition. */
+.bg-fine-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+/* Thin nexus connector line used between nodes in diagrams */
+.nexus-line {
+  stroke: #7c8794;
+  stroke-opacity: 0.45;
+}
+
+/* Utility for the eyebrow / kicker labels used above section headings */
+.eyebrow {
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #bca687;
+}
+
+/* Premium editorial treatment used throughout the refreshed homepage */
+img { -webkit-user-drag: none; }
+a, button { -webkit-tap-highlight-color: transparent; }
