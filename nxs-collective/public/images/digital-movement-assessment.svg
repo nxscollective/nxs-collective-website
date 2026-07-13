@@ -1,65 +1,16 @@
-<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a digital movement assessment using motion markers and screen analysis">
-  <defs>
-    <linearGradient id="bgGrad6" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#16161A"/>
-      <stop offset="100%" stop-color="#0A0A0B"/>
-    </linearGradient>
-    <radialGradient id="glow6" cx="48%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#C9CDD3" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#C9CDD3" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="960" height="720" fill="url(#bgGrad6)"/>
-  <rect width="960" height="720" fill="url(#glow6)"/>
-
-  <g stroke="#FFFFFF" stroke-opacity="0.04">
-    <line x1="0" y1="150" x2="960" y2="150"/>
-    <line x1="0" y1="300" x2="960" y2="300"/>
-    <line x1="0" y1="450" x2="960" y2="450"/>
-    <line x1="0" y1="600" x2="960" y2="600"/>
-    <line x1="160" y1="0" x2="160" y2="720"/>
-    <line x1="320" y1="0" x2="320" y2="720"/>
-    <line x1="480" y1="0" x2="480" y2="720"/>
-    <line x1="640" y1="0" x2="640" y2="720"/>
-    <line x1="800" y1="0" x2="800" y2="720"/>
-  </g>
-
-  <!-- figure mid-squat with motion capture markers at joints -->
-  <g stroke="#C9CDD3" stroke-width="2.5" fill="none" stroke-linecap="round">
-    <circle cx="380" cy="230" r="20"/>
-    <path d="M380 250 V 340" />
-    <path d="M380 270 L 320 320" />
-    <path d="M380 270 L 440 320" />
-    <path d="M380 340 L 330 420 L 330 500" />
-    <path d="M380 340 L 430 420 L 430 500" />
-  </g>
-  <g fill="#BCA687">
-    <circle cx="380" cy="230" r="3.5"/>
-    <circle cx="380" cy="270" r="3.5"/>
-    <circle cx="380" cy="340" r="3.5"/>
-    <circle cx="330" cy="420" r="3.5"/>
-    <circle cx="430" cy="420" r="3.5"/>
-    <circle cx="330" cy="500" r="3.5"/>
-    <circle cx="430" cy="500" r="3.5"/>
-    <circle cx="320" cy="320" r="3.5"/>
-    <circle cx="440" cy="320" r="3.5"/>
-  </g>
-
-  <!-- tablet / screen showing readout -->
-  <g transform="translate(560,240)">
-    <rect x="0" y="0" width="260" height="180" rx="6" fill="#131316" stroke="#3A3A40" stroke-width="2"/>
-    <text x="18" y="30" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="2" fill="#A6ACB5">MOVEMENT ANALYSIS</text>
-    <line x1="18" y1="46" x2="242" y2="46" stroke="#3A3A40" stroke-width="1"/>
-    <polyline points="18,140 60,120 100,150 140,100 180,130 220,90 242,110" fill="none" stroke="#BCA687" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="18" y="60" width="90" height="10" fill="#2A2A2E"/>
-    <rect x="18" y="60" width="60" height="10" fill="#7C8794"/>
-    <rect x="18" y="78" width="90" height="10" fill="#2A2A2E"/>
-    <rect x="18" y="78" width="72" height="10" fill="#7C8794"/>
-  </g>
-
-  <!-- camera/sensor stand -->
-  <line x1="520" y1="330" x2="520" y2="560" stroke="#3A3A40" stroke-width="4"/>
-  <rect x="505" y="310" width="30" height="24" rx="4" fill="none" stroke="#C9CDD3" stroke-width="2"/>
-
-  <text x="40" y="680" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="3" fill="#5C6169">NXS COLLECTIVE — PLACEHOLDER VISUAL</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+<title id="t">Movement analysis</title><desc id="d">Stylised premium clinical movement illustration</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25282d"/><stop offset=".55" stop-color="#111317"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#bca687" stop-opacity=".38"/><stop offset="1" stop-color="#bca687" stop-opacity="0"/></radialGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b7a18a"/><stop offset="1" stop-color="#6f6154"/></linearGradient>
+ <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#515862"/><stop offset="1" stop-color="#20242a"/></linearGradient>
+ <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+ <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/><rect width="1200" height="900" fill="url(#grid)"/>
+<circle cx="890" cy="250" r="360" fill="url(#glow)" opacity=".5"/>
+<path d="M90 720 C350 590 810 770 1110 610" fill="none" stroke="#bca687" stroke-opacity=".16" stroke-width="2"/>
+<g transform="translate(130 65)"><circle cx="600" cy="150" r="56" fill="url(#skin)"/><path d="M548 210 Q600 185 660 220 L705 470 H510Z" fill="#d6d2cb"/><path d="M540 275 Q420 345 355 450" stroke="url(#skin)" stroke-width="38" stroke-linecap="round"/><path d="M670 275 Q790 345 850 455" stroke="url(#skin)" stroke-width="38" stroke-linecap="round"/><path d="M555 468 L485 720" stroke="#22272d" stroke-width="58" stroke-linecap="round"/><path d="M670 468 L755 720" stroke="#22272d" stroke-width="58" stroke-linecap="round"/>
+<g fill="none" stroke="#d9c6a7" stroke-width="3" opacity=".82"><circle cx="600" cy="150" r="72"/><circle cx="600" cy="300" r="96"/><circle cx="550" cy="470" r="30"/><circle cx="670" cy="470" r="30"/><circle cx="485" cy="720" r="28"/><circle cx="755" cy="720" r="28"/><path d="M600 222V205M600 396L610 440M504 325L390 420M696 325L815 425M550 500L495 690M670 500L745 690"/></g>
+<g fill="#d9c6a7"><circle cx="600" cy="300" r="8"/><circle cx="550" cy="470" r="8"/><circle cx="670" cy="470" r="8"/></g></g><g opacity=".45"><circle cx="90" cy="90" r="4" fill="#bca687"/><path d="M90 90H250M90 90V250" stroke="#bca687"/></g></svg>

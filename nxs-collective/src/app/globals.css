@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: dark;
+  --font-montserrat: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+  --font-inter: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html {
@@ -74,3 +76,19 @@ select:focus-visible {
 /* Premium editorial treatment used throughout the refreshed homepage */
 img { -webkit-user-drag: none; }
 a, button { -webkit-tap-highlight-color: transparent; }
+
+/* Final visual refinement */
+body {
+  background-image: radial-gradient(circle at 50% -20%, rgba(188,166,135,.06), transparent 36%);
+}
+
+@media (hover: hover) {
+  .premium-lift {
+    transition: transform .45s cubic-bezier(.16,1,.3,1), border-color .45s ease, box-shadow .45s ease;
+  }
+  .premium-lift:hover {
+    transform: translateY(-5px);
+    border-color: rgba(188,166,135,.42);
+    box-shadow: 0 24px 70px rgba(0,0,0,.32);
+  }
+}

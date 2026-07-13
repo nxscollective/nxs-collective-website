@@ -1,72 +1,32 @@
-<svg viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a clinical movement assessment session">
-  <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#17171B"/>
-      <stop offset="100%" stop-color="#0A0A0B"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="38%" r="60%">
-      <stop offset="0%" stop-color="#BCA687" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#BCA687" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="960" height="720" fill="url(#bgGrad)"/>
-  <rect width="960" height="720" fill="url(#glow)"/>
-
-  <!-- fine biomechanics grid -->
-  <g stroke="#FFFFFF" stroke-opacity="0.045">
-    <g id="vlines"></g>
-  </g>
-  <g stroke="#FFFFFF" stroke-opacity="0.045">
-    <path d="M0 0 H960" />
-  </g>
-  <g stroke="#FFFFFF" stroke-opacity="0.04">
-    <line x1="0" y1="120" x2="960" y2="120"/>
-    <line x1="0" y1="240" x2="960" y2="240"/>
-    <line x1="0" y1="360" x2="960" y2="360"/>
-    <line x1="0" y1="480" x2="960" y2="480"/>
-    <line x1="0" y1="600" x2="960" y2="600"/>
-    <line x1="120" y1="0" x2="120" y2="720"/>
-    <line x1="240" y1="0" x2="240" y2="720"/>
-    <line x1="360" y1="0" x2="360" y2="720"/>
-    <line x1="480" y1="0" x2="480" y2="720"/>
-    <line x1="600" y1="0" x2="600" y2="720"/>
-    <line x1="720" y1="0" x2="720" y2="720"/>
-    <line x1="840" y1="0" x2="840" y2="720"/>
-  </g>
-
-  <!-- clinician wireframe figure (standing, gesturing toward client) -->
-  <g stroke="#C9CDD3" stroke-width="2.5" fill="none" stroke-linecap="round">
-    <circle cx="330" cy="230" r="24" />
-    <path d="M330 254 V 380" />
-    <path d="M330 285 L 260 340" />
-    <path d="M330 285 L 400 330" />
-    <path d="M330 380 L 285 500" />
-    <path d="M330 380 L 375 500" />
-  </g>
-
-  <!-- client wireframe figure (seated, being assessed) -->
-  <g stroke="#7C8794" stroke-width="2.5" fill="none" stroke-linecap="round">
-    <circle cx="600" cy="300" r="22" />
-    <path d="M600 322 V 420" />
-    <path d="M600 350 L 545 400" />
-    <path d="M600 350 L 660 395" />
-    <path d="M600 420 L 560 520" />
-    <path d="M600 420 L 645 520" />
-  </g>
-  <!-- seat / plinth suggestion -->
-  <line x1="520" y1="520" x2="700" y2="520" stroke="#3A3A40" stroke-width="3"/>
-
-  <!-- assessment annotation nodes -->
-  <g>
-    <circle cx="400" cy="330" r="4" fill="#BCA687"/>
-    <line x1="400" y1="330" x2="470" y2="290" stroke="#BCA687" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="478" y="288" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="2" fill="#BCA687">ROM CHECK</text>
-
-    <circle cx="645" cy="400" r="4" fill="#C9CDD3"/>
-    <line x1="645" y1="400" x2="720" y2="440" stroke="#C9CDD3" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="728" y="444" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="2" fill="#A6ACB5">L / R</text>
-  </g>
-
-  <text x="40" y="680" font-family="Montserrat, sans-serif" font-size="12" letter-spacing="3" fill="#5C6169">NXS COLLECTIVE — PLACEHOLDER VISUAL</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+<title id="t">Clinical movement assessment</title><desc id="d">Stylised premium clinical movement illustration</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25282d"/><stop offset=".55" stop-color="#111317"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#bca687" stop-opacity=".38"/><stop offset="1" stop-color="#bca687" stop-opacity="0"/></radialGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b7a18a"/><stop offset="1" stop-color="#6f6154"/></linearGradient>
+ <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#515862"/><stop offset="1" stop-color="#20242a"/></linearGradient>
+ <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+ <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/><rect width="1200" height="900" fill="url(#grid)"/>
+<circle cx="890" cy="250" r="360" fill="url(#glow)" opacity=".5"/>
+<path d="M90 720 C350 590 810 770 1110 610" fill="none" stroke="#bca687" stroke-opacity=".16" stroke-width="2"/>
+<g transform="translate(190 62)">
+<ellipse cx="530" cy="720" rx="420" ry="70" fill="#000" opacity=".35" filter="url(#soft)"/>
+<!-- client standing -->
+<circle cx="610" cy="180" r="58" fill="url(#skin)"/>
+<path d="M565 236 Q610 215 656 238 L700 510 Q650 550 563 512Z" fill="#d7d4ce"/>
+<path d="M580 300 Q530 410 500 548" fill="none" stroke="url(#skin)" stroke-width="40" stroke-linecap="round"/>
+<path d="M664 300 Q735 405 758 560" fill="none" stroke="url(#skin)" stroke-width="40" stroke-linecap="round"/>
+<path d="M589 512 L565 744" stroke="#252b31" stroke-width="58" stroke-linecap="round"/>
+<path d="M654 512 L690 744" stroke="#252b31" stroke-width="58" stroke-linecap="round"/>
+<!-- clinician -->
+<circle cx="255" cy="255" r="52" fill="url(#skin)"/>
+<path d="M215 312 Q260 280 315 318 L350 535 Q290 580 205 532Z" fill="url(#cloth)"/>
+<path d="M300 365 Q405 395 540 285" fill="none" stroke="url(#skin)" stroke-width="34" stroke-linecap="round"/>
+<path d="M232 530 L215 720" stroke="#181b20" stroke-width="52" stroke-linecap="round"/>
+<path d="M310 530 L346 720" stroke="#181b20" stroke-width="52" stroke-linecap="round"/>
+<!-- assessment overlays -->
+<g fill="none" stroke="#d9c6a7" stroke-width="3" opacity=".78"><circle cx="610" cy="290" r="92"/><path d="M610 198V382M518 290H702"/><path d="M476 290H390" stroke-dasharray="10 12"/><path d="M720 290H806" stroke-dasharray="10 12"/></g>
+<g fill="#d9c6a7"><circle cx="610" cy="198" r="7"/><circle cx="518" cy="290" r="7"/><circle cx="702" cy="290" r="7"/></g>
+</g><g opacity=".45"><circle cx="90" cy="90" r="4" fill="#bca687"/><path d="M90 90H250M90 90V250" stroke="#bca687"/></g></svg>

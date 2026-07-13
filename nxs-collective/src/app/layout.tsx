@@ -1,24 +1,9 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import { siteConfig } from "@/config/site";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const siteUrl = `https://${siteConfig.business.domain}`;
 
@@ -71,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
+    <html lang="en">
       <body className="font-body antialiased">
         <Navbar />
         <main className="pt-20">{children}</main>
