@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
-import IntegratedCare from "@/components/home/IntegratedCare";
+import TrustBar from "@/components/home/TrustBar";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import MovementHealthcheck from "@/components/home/MovementHealthcheck";
+import IntegratedCare from "@/components/home/IntegratedCare";
 import WhyChooseNXS from "@/components/home/WhyChooseNXS";
-import ReviewsCarousel from "@/components/home/ReviewsCarousel";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
 import FinalCTA from "@/components/home/FinalCTA";
 
@@ -18,11 +19,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <IntegratedCare />
+      <TrustBar />
+      <GoogleReviews />
       <ServicesOverview />
       <MovementHealthcheck />
+      <IntegratedCare />
       <WhyChooseNXS />
-      <ReviewsCarousel />
       <WhoWeHelp />
       <FinalCTA />
     </>

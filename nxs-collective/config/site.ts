@@ -54,15 +54,17 @@ export const siteConfig = {
   /**
    * GOOGLE REVIEWS
    * ─────────────────────────────────────────────────────────────────────
-   * Used by the "View All Google Reviews" button under the homepage
-   * reviews carousel. Replace with your real Google Business Profile
-   * review link — the easiest way to get this is to search "NXS
-   * Collective" on Google, open your Business Profile, click "Reviews",
-   * and copy the link from your browser's address bar (or use the
-   * short-link generator in your Google Business Profile dashboard, which
-   * looks like https://g.page/r/XXXXXXXXXXXX/review).
+   * Used by the buttons under the homepage Google Reviews widget.
+   *   - googleReviewsViewUrl: your public Google reviews page.
+   *   - googleReviewSubmissionUrl: the direct link that opens Google's
+   *     "write a review" form for your business.
+   * The easiest way to get both: search "NXS Collective" on Google, open
+   * your Business Profile, click "Reviews" for the first link, and use
+   * the "Ask for reviews" share link (or https://g.page/r/XXXXXXXXXXXX/review)
+   * for the second.
    */
-  googleReviewsUrl: "https://example.com/google-reviews",
+  googleReviewsViewUrl: "PASTE_GOOGLE_REVIEWS_PAGE_LINK_HERE",
+  googleReviewSubmissionUrl: "PASTE_GOOGLE_REVIEW_SUBMISSION_LINK_HERE",
 
   /**
    * CONTACT DETAILS
