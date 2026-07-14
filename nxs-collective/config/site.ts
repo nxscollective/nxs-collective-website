@@ -52,6 +52,19 @@ export const siteConfig = {
   },
 
   /**
+   * GOOGLE REVIEWS
+   * ─────────────────────────────────────────────────────────────────────
+   * Used by the "View All Google Reviews" button under the homepage
+   * reviews carousel. Replace with your real Google Business Profile
+   * review link — the easiest way to get this is to search "NXS
+   * Collective" on Google, open your Business Profile, click "Reviews",
+   * and copy the link from your browser's address bar (or use the
+   * short-link generator in your Google Business Profile dashboard, which
+   * looks like https://g.page/r/XXXXXXXXXXXX/review).
+   */
+  googleReviewsUrl: "https://example.com/google-reviews",
+
+  /**
    * CONTACT DETAILS
    * ─────────────────────────────────────────────────────────────────────
    */
@@ -75,10 +88,14 @@ export const siteConfig = {
       { days: "Saturday – Sunday", hours: "8:00 AM – 6:00 PM" },
     ],
 
-    // Used for the Contact page map placeholder. Replace with a real
-    // Google Maps embed URL once available (Google Maps → Share → Embed
-    // a map → copy the src="..." value).
-    mapEmbedUrl: "",
+    // Google Maps embed for the Contact page. This is built from the
+    // address above using Google's no-API-key "output=embed" format, so
+    // it works immediately. For a pinpoint-exact marker (rather than a
+    // location search), you can replace it any time: open Google Maps →
+    // search your address → Share → Embed a map → copy the src="..."
+    // value from the provided <iframe> and paste the whole URL here.
+    mapEmbedUrl:
+      "https://www.google.com/maps?q=6+Eu+Tong+Sen+Street%2C+%2310-17%2C+SOHO1+%40+The+Central%2C+Singapore+059817&output=embed",
   },
 } as const;
 

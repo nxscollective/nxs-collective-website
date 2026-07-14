@@ -4,6 +4,7 @@ import IntegratedCare from "@/components/home/IntegratedCare";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import MovementHealthcheck from "@/components/home/MovementHealthcheck";
 import WhyChooseNXS from "@/components/home/WhyChooseNXS";
+import ReviewsCarousel from "@/components/home/ReviewsCarousel";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
 import FinalCTA from "@/components/home/FinalCTA";
 
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ServicesOverview />
       <MovementHealthcheck />
       <WhyChooseNXS />
+      <ReviewsCarousel />
       <WhoWeHelp />
       <FinalCTA />
     </>
