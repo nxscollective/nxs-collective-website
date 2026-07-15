@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -7,6 +8,14 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import { siteConfig } from "@/config/site";
 
 const siteUrl = `https://${siteConfig.business.domain}`;
+
+/**
+ * GA4 measurement ID for NXS Collective's Google Analytics property.
+ * This is a public, client-exposed identifier (it ships inside the GA
+ * script tag itself once loaded) — not a secret — so it's safe to keep
+ * as a plain constant here rather than an environment variable.
+ */
+const GA_MEASUREMENT_ID = "G-HE22N55HMK";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -87,6 +96,18 @@ export default function RootLayout({
         <Footer />
         <FloatingWhatsApp />
       </body>
+      {/*
+        GOOGLE ANALYTICS (GA4) — SINGLE INSTANCE, SITE-WIDE, PRODUCTION ONLY.
+        Uses the official @next/third-parties/google integration, placed as
+        a sibling to <body> per Next.js's own documented pattern:
+        https://nextjs.org/docs/app/guides/third-party-libraries
+        Gated on NODE_ENV so it never fires during local development or
+        preview/test runs — only on `next build && next start` / production
+        deploys, where NODE_ENV is automatically set to "production".
+      */}
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+      )}
     </html>
   );
 }
