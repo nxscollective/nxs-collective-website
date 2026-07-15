@@ -4,7 +4,7 @@ import { getWhatsappUrl } from "@/config/site";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-graphite py-24 md:py-28">
+    <section className="bg-graphite py-16 md:py-20">
       <Container className="text-center">
         <h2 className="font-display mx-auto max-w-2xl text-3xl font-semibold leading-tight text-bone md:text-4xl">
           Not Sure Which Service You Need?

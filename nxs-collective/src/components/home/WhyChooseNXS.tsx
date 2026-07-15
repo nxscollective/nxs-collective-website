@@ -11,9 +11,9 @@ const points = [
 
 export default function WhyChooseNXS() {
   return (
-    <section className="border-b border-black/10 bg-[#f1efe9] py-20 text-ink md:py-24">
+    <section className="border-b border-black/10 bg-[#f1efe9] py-16 text-ink md:py-20">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[.55fr_1.45fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[.55fr_1.45fr] lg:items-start">
           <div>
             <p className="font-display text-xs font-semibold uppercase tracking-[.24em] text-sand-dim">Why NXS Collective?</p>
             <h2 className="mt-4 font-display text-3xl font-semibold uppercase leading-tight md:text-4xl">One connected pathway.</h2>

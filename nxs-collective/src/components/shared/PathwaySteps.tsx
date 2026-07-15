@@ -1,6 +1,13 @@
+import type { LucideIcon } from "lucide-react";
 import { SearchCheck, HeartPulse, Layers, TrendingUp } from "lucide-react";
 
-const stages = [
+export interface PathwayStage {
+  label: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const defaultStages: PathwayStage[] = [
   {
     label: "Assess",
     description: "Clinical and movement assessment to understand the root cause.",
@@ -23,7 +30,14 @@ const stages = [
   },
 ];
 
-export default function PathwaySteps() {
+/**
+ * A connected, numbered pathway diagram — vertical on mobile, horizontal on
+ * desktop. Defaults to the site-wide Assess → Treat → Rebuild → Perform
+ * pathway, but accepts a custom `stages` list so other pages (e.g. Personal
+ * Training's own 5-step pathway) can reuse the same visual language instead
+ * of duplicating this component.
+ */
+export default function PathwaySteps({ stages = defaultStages }: { stages?: PathwayStage[] }) {
   return (
     <div className="relative">
       {/* Connecting line: vertical on mobile, horizontal on desktop */}
@@ -32,7 +46,7 @@ export default function PathwaySteps() {
         className="absolute left-[27px] top-2 bottom-2 w-px bg-hairline md:left-0 md:right-0 md:top-[27px] md:bottom-auto md:h-px md:w-auto"
       />
 
-      <ol className="relative flex flex-col gap-10 md:flex-row md:justify-between md:gap-6">
+      <ol className="relative flex flex-col gap-8 md:flex-row md:justify-between md:gap-6">
         {stages.map((stage, index) => {
           const Icon = stage.icon;
           return (

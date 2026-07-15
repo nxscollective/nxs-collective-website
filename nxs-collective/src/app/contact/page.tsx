@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Mail, Instagram, MapPin, Clock } from "lucide-react";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import PageHero from "@/components/shared/PageHero";
@@ -20,27 +19,15 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Get in touch"
         description="Tell us what you are currently experiencing and our team will guide you towards the most suitable starting point."
+        image={{
+          src: "/images/homepage/hero-home.webp",
+          alt: "The NXS Collective training and treatment space",
+          objectPosition: "70% 35%",
+        }}
       />
 
-      <section className="border-b border-hairline bg-ink">
-        <div className="relative aspect-[21/9] w-full">
-          {/*
-            REPLACE THIS IMAGE:
-            Swap /public/images/rehab-performance-setting.svg for a real
-            wide photo of the clinic / training space. Same file name =
-            layout unchanged.
-          */}
-          <Image
-            src="/images/rehab-performance-setting.svg"
-            alt="The modern rehabilitation and performance training space at NXS Collective"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="border-b border-hairline bg-graphite py-20 md:py-24">
-        <Container className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="border-b border-hairline bg-graphite py-16 md:py-20">
+        <Container className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <SectionHeading eyebrow="Send an Enquiry" title="Send us a message" />
             <div className="mt-8">
@@ -48,7 +35,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-9">
             <div>
               <p className="eyebrow mb-4">Contact Details</p>
               <ul className="flex flex-col gap-4 text-sm text-mist md:text-base">
@@ -107,13 +94,6 @@ export default function ContactPage() {
 
             <div>
               <p className="eyebrow mb-4">Location</p>
-              {/*
-                MAP EMBED:
-                Once you have a Google Maps embed link, paste it into
-                `mapEmbedUrl` in config/site.ts and this placeholder will
-                automatically be replaced with a live map — no other code
-                needs to change.
-              */}
               {siteConfig.contact.mapEmbedUrl ? (
                 <iframe
                   src={siteConfig.contact.mapEmbedUrl}

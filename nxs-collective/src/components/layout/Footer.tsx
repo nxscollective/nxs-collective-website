@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Mail, MapPin } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { Instagram, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { siteConfig, getWhatsappUrl } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 
 const pageLinks = [
@@ -16,27 +16,36 @@ const pageLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-hairline bg-ink">
-      <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-4">
+      <Container className="py-12">
+        <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <Image
               src="/images/logo-mark.jpg"
               alt="NXS Collective"
               width={848}
               height={580}
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             />
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-mist">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist">
               Integrated physiotherapy, sports therapy and personal training —
               directly above Clarke Quay MRT, Singapore.
             </p>
-            <div className="mt-6 flex flex-col gap-3 text-sm text-mist">
+            <div className="mt-5 flex flex-col gap-2.5 text-sm text-mist">
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 className="flex items-center gap-2 hover:text-bone transition-colors"
               >
-                <Mail size={16} strokeWidth={1.5} />
+                <Mail size={15} strokeWidth={1.5} />
                 {siteConfig.contact.email}
+              </a>
+              <a
+                href={getWhatsappUrl("Hi NXS Collective, I'd like to make an enquiry.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-bone transition-colors"
+              >
+                <MessageCircle size={15} strokeWidth={1.5} />
+                WhatsApp Us
               </a>
               <a
                 href={siteConfig.contact.instagramUrl}
@@ -44,11 +53,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-bone transition-colors"
               >
-                <Instagram size={16} strokeWidth={1.5} />
+                <Instagram size={15} strokeWidth={1.5} />
                 @nxscollective.sg
               </a>
-              <p className="flex items-center gap-2">
-                <MapPin size={16} strokeWidth={1.5} />
+              <p className="flex items-start gap-2">
+                <MapPin size={15} strokeWidth={1.5} className="mt-0.5 shrink-0" />
                 {siteConfig.contact.address}
               </p>
             </div>
@@ -56,7 +65,7 @@ export default function Footer() {
 
           <div>
             <p className="eyebrow mb-4">Site</p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2.5">
               {pageLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -71,35 +80,40 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-4">Legal</p>
-            <ul className="flex flex-col gap-3">
-              <li>
-                {/* Placeholder page — replace href with a real /privacy-policy
-                    route once your policy is drafted. */}
-                <span className="text-sm text-mist">Privacy Policy (coming soon)</span>
-              </li>
-              <li>
-                {/* Placeholder page — replace href with a real /terms route
-                    once your terms are drafted. */}
-                <span className="text-sm text-mist">Terms &amp; Conditions (coming soon)</span>
-              </li>
+            <p className="eyebrow mb-4 flex items-center gap-2">
+              <Clock size={13} strokeWidth={1.75} />
+              Hours
+            </p>
+            <ul className="flex flex-col gap-2.5">
+              {siteConfig.contact.operatingHours.map((slot) => (
+                <li key={slot.days} className="text-sm text-mist">
+                  <span className="block text-bone">{slot.days}</span>
+                  {slot.hours}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 border-t border-hairline pt-8">
-          <p className="max-w-3xl text-xs leading-relaxed text-mist/80">
-            Information on this website is provided for general educational
-            purposes and does not replace an individual clinical assessment,
-            medical diagnosis or treatment. Treatment and training
-            recommendations will vary based on each client&apos;s condition,
-            medical history, assessment findings and physical capacity.
+        <div className="mt-10 flex flex-col gap-4 border-t border-hairline pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-mist/60">
+            © {new Date().getFullYear()} {siteConfig.business.legalName}. All rights reserved.
           </p>
-          <p className="mt-6 text-xs text-mist/60">
-            © {new Date().getFullYear()} {siteConfig.business.legalName}. All
-            rights reserved.
-          </p>
+          <div className="flex gap-5">
+            {/* Placeholder pages — link to real /privacy-policy and /terms
+                routes once those pages exist. */}
+            <span className="text-xs text-mist/60">Privacy Policy</span>
+            <span className="text-xs text-mist/60">Terms &amp; Conditions</span>
+          </div>
         </div>
+
+        <p className="mt-6 max-w-3xl text-xs leading-relaxed text-mist/50">
+          Information on this website is provided for general educational
+          purposes and does not replace an individual clinical assessment,
+          medical diagnosis or treatment. Treatment and training
+          recommendations will vary based on each client&apos;s condition,
+          medical history, assessment findings and physical capacity.
+        </p>
       </Container>
     </footer>
   );

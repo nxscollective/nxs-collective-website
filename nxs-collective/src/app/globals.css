@@ -92,3 +92,50 @@ body {
     box-shadow: 0 24px 70px rgba(0,0,0,.32);
   }
 }
+
+/* Carbon-fibre texture — near-invisible, felt rather than seen. Used as a
+   background layer on select dark sections/cards, always at very low
+   opacity (opacity is set on the element using it, not baked in here). */
+.bg-carbon {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 6px);
+}
+
+/* Gentle image zoom on card/media hover — pair with overflow-hidden on the
+   parent. Respects reduced-motion via the global rule above. */
+.media-zoom {
+  transition: transform .6s cubic-bezier(.16,1,.3,1);
+}
+@media (hover: hover) {
+  .media-zoom-wrap:hover .media-zoom {
+    transform: scale(1.045);
+  }
+}
+
+/* Nav-link underline — grows in from the centre on hover/focus rather
+   than a simple colour change, kept understated. */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -6px;
+  height: 1px;
+  background: #bca687;
+  transition: left .35s cubic-bezier(.16,1,.3,1), right .35s cubic-bezier(.16,1,.3,1);
+}
+@media (hover: hover) {
+  .nav-underline:hover::after,
+  .nav-underline:focus-visible::after {
+    left: 0;
+    right: 0;
+  }
+}
+.nav-underline[data-active="true"]::after {
+  left: 0;
+  right: 0;
+}

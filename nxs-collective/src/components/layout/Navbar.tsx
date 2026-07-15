@@ -57,7 +57,8 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-sm tracking-wide transition-colors duration-300 ${
+                  data-active={isActive}
+                  className={`nav-underline text-sm tracking-wide transition-colors duration-300 ${
                     isActive ? "text-bone" : "text-mist hover:text-bone"
                   }`}
                   aria-current={isActive ? "page" : undefined}

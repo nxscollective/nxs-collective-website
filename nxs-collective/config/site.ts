@@ -55,16 +55,10 @@ export const siteConfig = {
    * GOOGLE REVIEWS
    * ─────────────────────────────────────────────────────────────────────
    * Used by the buttons under the homepage Google Reviews widget.
-   *   - googleReviewsViewUrl: your public Google reviews page.
-   *   - googleReviewSubmissionUrl: the direct link that opens Google's
-   *     "write a review" form for your business.
-   * The easiest way to get both: search "NXS Collective" on Google, open
-   * your Business Profile, click "Reviews" for the first link, and use
-   * the "Ask for reviews" share link (or https://g.page/r/XXXXXXXXXXXX/review)
-   * for the second.
    */
-  googleReviewsViewUrl: "PASTE_GOOGLE_REVIEWS_PAGE_LINK_HERE",
-  googleReviewSubmissionUrl: "PASTE_GOOGLE_REVIEW_SUBMISSION_LINK_HERE",
+  googleReviewsViewUrl:
+    "https://www.google.com/search?sca_esv=c9ce5070ea22d1f0&rlz=1C5CHFA_enSG886SG886&biw=1045&bih=745&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_86M6CLr1vhXmNHGbyEt8rmo2iHH-UsCibSwFA8zvMlbYuDqVGKxt7l6ftaO5Nk8VCB-0UC3-BJLO_dnJkpzDn594tEF0vp4fex5DDe1dbmqKTWHkKbW6KD_e_6joJaKT9x17n5MSfIIi6vodI_WbAHLG1d-&q=NXS+Collective+-+Physiotherapy+%26+Personal+Training+Singapore+Reviews&sa=X&ved=2ahUKEwi_kcD-39GVAxXw1jgGHSi1Ij4Q0bkNegQIIBAI",
+  googleReviewSubmissionUrl: "https://g.page/r/Ce7gWMwLSPctEBM/review",
 
   /**
    * CONTACT DETAILS

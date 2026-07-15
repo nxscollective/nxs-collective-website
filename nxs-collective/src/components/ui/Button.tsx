@@ -10,8 +10,8 @@ interface NativeButtonProps extends BaseProps { href?: never; external?: never; 
 type ButtonProps = LinkButtonProps | NativeButtonProps;
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-sand text-ink hover:bg-[#d5bb94] border border-sand shadow-[0_8px_30px_rgba(188,166,135,.12)]",
-  secondary: "bg-transparent text-bone border border-sand/70 hover:bg-sand hover:text-ink",
+  primary: "bg-sand text-ink hover:bg-[#d5bb94] border border-sand shadow-[0_8px_30px_rgba(188,166,135,.12)] hover:-translate-y-0.5 hover:shadow-[0_14px_40px_rgba(188,166,135,.2)]",
+  secondary: "bg-transparent text-bone border border-sand/70 hover:bg-sand hover:text-ink hover:-translate-y-0.5",
   ghost: "bg-transparent text-mist hover:text-bone border border-transparent underline underline-offset-4 decoration-hairline",
 };
 const baseStyles = "inline-flex items-center justify-center gap-2 px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[.08em] transition-all duration-300 whitespace-nowrap";
