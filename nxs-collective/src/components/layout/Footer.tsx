@@ -100,10 +100,18 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.business.legalName}. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {/* Placeholder pages — link to real /privacy-policy and /terms
-                routes once those pages exist. */}
-            <span className="text-xs text-mist/60">Privacy Policy</span>
-            <span className="text-xs text-mist/60">Terms &amp; Conditions</span>
+            <Link
+              href="/privacy-policy"
+              className="text-xs text-mist/60 hover:text-bone transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="text-xs text-mist/60 hover:text-bone transition-colors"
+            >
+              Terms &amp; Conditions
+            </Link>
           </div>
         </div>
 

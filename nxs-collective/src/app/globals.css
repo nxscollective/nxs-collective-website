@@ -139,3 +139,34 @@ body {
   left: 0;
   right: 0;
 }
+
+/* Long-form legal content (Privacy Policy, Terms & Conditions). Additive
+   only — keeps every heading/paragraph/list on these pages using the
+   exact same type scale and colour tokens as the rest of the site
+   without repeating the same utility class string on every element
+   across two large page files. Nothing here overrides an existing
+   rule above. */
+.legal-prose {
+  max-width: 48rem; /* comfortable reading measure within Container's max-w-6xl */
+}
+.legal-prose h2 {
+  @apply mt-12 border-t border-hairline pt-10 font-display text-xl font-semibold leading-tight text-bone md:text-2xl;
+}
+.legal-prose h2:first-child {
+  @apply mt-0 border-t-0 pt-0;
+}
+.legal-prose p {
+  @apply mt-4 text-sm leading-relaxed text-mist md:text-base;
+}
+.legal-prose ul {
+  @apply mt-4 flex list-disc flex-col gap-2 pl-5;
+}
+.legal-prose ul li {
+  @apply marker:text-sand text-sm leading-relaxed text-mist md:text-base;
+}
+.legal-prose strong {
+  @apply font-semibold text-bone;
+}
+.legal-prose a {
+  @apply text-sand underline underline-offset-4 transition-colors hover:text-bone;
+}
