@@ -87,10 +87,7 @@ export default function RootLayout({
           position, and once wherever Next injected the ID'd script tag
           (which turned out to be after the footer).
         */}
-        <Script
-          src="https://cdn.trustindex.io/loader.js"
-          strategy="beforeInteractive"
-        />
+
         <Navbar />
         <main className="pt-20">{children}</main>
         <Footer />
