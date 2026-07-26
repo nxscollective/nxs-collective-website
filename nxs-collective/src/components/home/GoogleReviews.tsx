@@ -30,7 +30,7 @@ export default function GoogleReviews() {
   }, []);
 
   return (
-    <section className="border-b border-black/10 bg-[#f1efe9] py-8">
+    <section className="hidden border-b border-black/10 bg-[#f1efe9] py-8">
       <Container>
         <div
           ref={widgetContainer}
