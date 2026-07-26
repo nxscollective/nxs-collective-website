@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { Container } from "@/components/ui/Container";
 
 const TRUSTINDEX_SRC =
-  "https://cdn.trustindex.io/loader.js?334e1b1772d6740bf446d290be1";
+  "https://cdn.trustindex.io/loader.js?f49097077c557410b1660218e5c";
 
 export default function GoogleReviews() {
   const widgetContainer = useRef<HTMLDivElement>(null);
