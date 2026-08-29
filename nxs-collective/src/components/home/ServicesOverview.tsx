@@ -8,7 +8,8 @@ const services = [
   {
     title: "Physiotherapy",
     index: "01",
-    image: "/images/physiotherapy/physio-hero-samuel.webp",
+    image: "/images/physiotherapy/physio-consult-sketch.webp",
+    objectPosition: "50% 43%",
     alt: "Physiotherapist treating a client at NXS Collective",
     description:
       "Clinical assessment and rehabilitation for musculoskeletal pain, injuries, movement limitations and post-operative recovery.",
@@ -18,6 +19,7 @@ const services = [
     title: "Sports Therapy",
     index: "02",
     image: "/images/sports-therapy/sports-therapy-hero.webp",
+    objectPosition: "50% 50%",
     alt: "Sports therapist performing manual therapy",
     description:
       "Hands-on therapy, mobility work and exercise-based rehabilitation to support recovery and physical function.",
@@ -27,6 +29,7 @@ const services = [
     title: "Personal Training",
     index: "03",
     image: "/images/personal-training/personal-training-female.webp",
+    objectPosition: "50% 50%",
     alt: "Strength coach supervising controlled resistance training",
     description:
       "Individualised strength, body-composition and performance training based on your current capacity and goals.",
@@ -56,6 +59,7 @@ export default function ServicesOverview() {
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
                   className="media-zoom object-cover"
+                  style={{ objectPosition: service.objectPosition }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
                 <span className="absolute left-5 top-5 font-display text-[10px] uppercase tracking-[.24em] text-sand">

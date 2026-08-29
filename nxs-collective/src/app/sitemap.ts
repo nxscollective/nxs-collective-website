@@ -7,8 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/why-nxs",
     "/physiotherapy",
+    "/physiotherapy/samuel-mak",
     "/sports-therapy",
     "/personal-training",
+    "/blog",
     "/contact",
   ];
 

@@ -10,6 +10,7 @@ const pageLinks = [
   { href: "/physiotherapy", label: "Physiotherapy" },
   { href: "/sports-therapy", label: "Sports Therapy" },
   { href: "/personal-training", label: "Personal Training" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 

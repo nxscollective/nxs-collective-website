@@ -5,7 +5,7 @@ import Card from "@/components/ui/Card";
 interface TreatmentCardProps {
   title: string;
   description: string;
-  image?: { src: string; alt: string };
+  image?: { src: string; alt: string; objectPosition?: string };
   icon?: LucideIcon;
 }
 
@@ -26,6 +26,7 @@ export default function TreatmentCard({ title, description, image, icon: Icon }:
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="media-zoom object-cover"
+            style={{ objectPosition: image.objectPosition ?? "50% 50%" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
         </div>

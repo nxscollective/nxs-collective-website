@@ -38,7 +38,7 @@ export default function WhyNxsPage() {
         <Container className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden border border-black/10 order-2 lg:order-1">
             <Image
-              src="/images/physiotherapy/manual-therapy-1.webp"
+              src="/images/physiotherapy/manual-therapy-sketch.webp"
               alt="Hands-on treatment at NXS Collective"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

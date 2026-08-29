@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/physiotherapy", label: "Physiotherapy" },
   { href: "/sports-therapy", label: "Sports Therapy" },
   { href: "/personal-training", label: "Personal Training" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -50,9 +51,9 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-9 lg:flex">
+        <ul className="hidden items-center gap-7 lg:flex xl:gap-9">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(`${link.href}/`));
             return (
               <li key={link.href}>
                 <Link

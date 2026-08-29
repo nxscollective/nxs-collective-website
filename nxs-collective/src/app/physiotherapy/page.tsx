@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import PageHero from "@/components/shared/PageHero";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import TreatmentCard from "@/components/shared/TreatmentCard";
-import { Check, Dumbbell, Gauge } from "lucide-react";
+import { Check, Gauge } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Physiotherapy in Clarke Quay, Singapore",
@@ -28,22 +30,27 @@ const treatments = [
   {
     title: "Manual Therapy",
     description: "Hands-on joint and soft-tissue techniques to support pain relief and mobility.",
-    image: { src: "/images/physiotherapy/manual-therapy-1.webp", alt: "Physiotherapist performing manual therapy on a client" },
+    image: { src: "/images/physiotherapy/manual-therapy-sketch.webp", alt: "Samuel performing manual therapy on a client", objectPosition: "50% 43%" },
   },
   {
     title: "Therapeutic Ultrasound",
     description: "Targeted ultrasound therapy used to support tissue healing and reduce discomfort.",
-    image: { src: "/images/physiotherapy/therapeutic-ultrasound.webp", alt: "Therapeutic ultrasound being applied during a physiotherapy session" },
+    image: { src: "/images/physiotherapy/therapeutic-ultrasound-sketch.webp", alt: "Therapeutic ultrasound being applied during a physiotherapy session", objectPosition: "50% 55%" },
   },
   {
     title: "Shockwave Therapy",
     description: "Focused shockwave treatment for persistent tendon and soft-tissue conditions.",
-    image: { src: "/images/physiotherapy/shockwave-therapy.webp", alt: "Shockwave therapy device being used on a client" },
+    image: { src: "/images/physiotherapy/shockwave-therapy-sketch.webp", alt: "Shockwave therapy being applied to a client's lower leg", objectPosition: "50% 58%" },
+  },
+  {
+    title: "Clinical Dry Needling",
+    description: "Targeted dry needling used where clinically appropriate as part of a broader rehabilitation plan.",
+    image: { src: "/images/physiotherapy/clinical-dry-needling-sketch.webp", alt: "Samuel performing clinical dry needling", objectPosition: "50% 42%" },
   },
   {
     title: "Exercise Rehabilitation",
     description: "Structured, progressive exercise to rebuild strength, control and confidence.",
-    icon: Dumbbell,
+    image: { src: "/images/physiotherapy/exercise-rehabilitation-sketch.webp", alt: "Client performing a controlled rehabilitation exercise", objectPosition: "50% 54%" },
   },
   {
     title: "Strength Assessment",
@@ -67,21 +74,14 @@ const appointmentIncludes = [
 export default function PhysiotherapyPage() {
   return (
     <>
-      {/*
-        REAL PHOTOGRAPH — never regenerate or replace this image. The
-        original, unedited file lives in /image-sources/physiotherapy/ for
-        reference. Only CSS crop/position/gradient/brightness are applied
-        here, exactly as the creative direction specifies.
-      */}
       <PageHero
         eyebrow="Physiotherapy"
         title="Physiotherapy at NXS Collective"
         description="Physiotherapy at NXS Collective is suitable for musculoskeletal pain, injury rehabilitation, movement limitations and a structured return to activity."
         image={{
-          src: "/images/physiotherapy/physio-hero-samuel.webp",
-          alt: "Samuel, physiotherapist at NXS Collective, treating a client",
-          objectPosition: "62% 38%",
-          brightness: 1.12,
+          src: "/images/physiotherapy/physio-consult-sketch.webp",
+          alt: "Samuel discussing assessment findings with a client",
+          objectPosition: "58% 43%",
         }}
       />
 
@@ -97,6 +97,45 @@ export default function PhysiotherapyPage() {
             ))}
           </ul>
           <BookPhysioCTA className="mt-9" />
+        </Container>
+      </section>
+
+      <section className="border-b border-hairline bg-ink py-16 md:py-20">
+        <Container>
+          <div className="grid overflow-hidden border border-hairline bg-graphite md:grid-cols-[.72fr_1.28fr]">
+            <div className="relative min-h-[360px] overflow-hidden border-b border-hairline md:min-h-[460px] md:border-b-0 md:border-r">
+              <Image
+                src="/images/team/samuel-mak-han-wei.webp"
+                alt="Samuel Mak Han Wei, Clinical Director and Principal Physiotherapist at NXS Collective"
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+                style={{ objectPosition: "50% 35%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" />
+            </div>
+            <div className="flex flex-col justify-center p-7 md:p-12">
+              <p className="eyebrow mb-4">Meet Your Physiotherapist</p>
+              <h2 className="font-display text-3xl font-semibold leading-tight text-bone md:text-4xl">
+                Samuel Mak Han Wei
+              </h2>
+              <p className="mt-3 font-display text-sm uppercase tracking-[.15em] text-silver">
+                Clinical Director &amp; Principal Physiotherapist
+              </p>
+              <p className="mt-2 text-xs uppercase tracking-[.16em] text-mist">
+                AHPC Registration No. A2300445F
+              </p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-mist">
+                Samuel began his career at Singapore General Hospital and has clinical interests in racket-sport injuries, knee rehabilitation, and neck and lower-back conditions.
+              </p>
+              <Link
+                href="/physiotherapy/samuel-mak"
+                className="mt-7 w-fit border-b border-sand pb-1 font-display text-xs uppercase tracking-[.2em] text-sand transition-colors hover:text-bone"
+              >
+                Read Samuel&apos;s profile
+              </Link>
+            </div>
+          </div>
         </Container>
       </section>
 

@@ -32,7 +32,7 @@ const tiers = [
     name: "Movement Analysis",
     price: "$129",
     description: "Digital movement assessment, mobility and control screening.",
-    image: "/images/movement-health/movement-analysis.webp",
+    image: "/images/movement-health/movement-analysis-sketch.webp",
     alt: "Digital motion-capture functional movement assessment",
     label: "Book Movement Analysis",
     href: siteConfig.booking.generalBookingUrl,
