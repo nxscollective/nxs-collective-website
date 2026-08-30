@@ -68,9 +68,6 @@ export default function SamuelMakPage() {
             <p className="mt-5 font-display text-sm uppercase leading-relaxed tracking-[.16em] text-silver">
               Clinical Director &amp; Principal Physiotherapist
             </p>
-            <p className="mt-3 text-xs uppercase tracking-[.16em] text-mist">
-              AHPC Registration No. A2300445F
-            </p>
             <div className="mt-8 h-px w-16 bg-sand" />
             <p className="mt-8 text-lg leading-relaxed text-mist">
               Helping clients move beyond pain, rebuild confidence and return to the activities that matter to them.
