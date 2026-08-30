@@ -79,9 +79,10 @@ export default function PhysiotherapyPage() {
         title="Physiotherapy at NXS Collective"
         description="Physiotherapy at NXS Collective is suitable for musculoskeletal pain, injury rehabilitation, movement limitations and a structured return to activity."
         image={{
-          src: "/images/physiotherapy/physio-consult-sketch.webp",
-          alt: "Samuel discussing assessment findings with a client",
-          objectPosition: "58% 43%",
+          src: "/images/physiotherapy/physio-hero-samuel.webp",
+          alt: "Samuel, physiotherapist at NXS Collective, treating a client",
+          objectPosition: "62% 38%",
+          brightness: 1.12,
         }}
       />
 
