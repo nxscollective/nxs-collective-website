@@ -108,9 +108,6 @@ export default function PhysiotherapyPage() {
               <p className="mt-3 font-display text-sm uppercase tracking-[.15em] text-silver">
                 Clinical Director &amp; Principal Physiotherapist
               </p>
-              <p className="mt-2 text-xs uppercase tracking-[.16em] text-mist">
-                AHPC Registration No. A2300445F
-              </p>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-mist">
                 Samuel began his career at Singapore General Hospital and has clinical interests in racket-sport injuries, knee rehabilitation, and neck and lower-back conditions.
               </p>
@@ -139,8 +136,6 @@ export default function PhysiotherapyPage() {
           <BookPhysioCTA className="mt-9" />
         </Container>
       </section>
-
-
 
       <section className="border-b border-hairline bg-ink py-16 md:py-20">
         <Container>
