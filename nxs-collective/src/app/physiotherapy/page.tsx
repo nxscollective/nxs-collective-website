@@ -86,21 +86,6 @@ export default function PhysiotherapyPage() {
         }}
       />
 
-      <section className="border-b border-hairline bg-graphite py-16 md:py-20">
-        <Container>
-          <SectionHeading eyebrow="Who This Is For" title="Conditions we commonly work with" />
-          <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-            {conditions.map((item) => (
-              <li key={item} className="flex items-start gap-2.5 text-sm text-mist md:text-base">
-                <Check size={17} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sand" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <BookPhysioCTA className="mt-9" />
-        </Container>
-      </section>
-
       <section className="border-b border-hairline bg-ink py-16 md:py-20">
         <Container>
           <div className="grid overflow-hidden border border-hairline bg-graphite md:grid-cols-[.72fr_1.28fr]">
@@ -139,6 +124,23 @@ export default function PhysiotherapyPage() {
           </div>
         </Container>
       </section>
+
+      <section className="border-b border-hairline bg-graphite py-16 md:py-20">
+        <Container>
+          <SectionHeading eyebrow="Who This Is For" title="Conditions we commonly work with" />
+          <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+            {conditions.map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm text-mist md:text-base">
+                <Check size={17} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sand" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <BookPhysioCTA className="mt-9" />
+        </Container>
+      </section>
+
+
 
       <section className="border-b border-hairline bg-ink py-16 md:py-20">
         <Container>
