@@ -3,14 +3,27 @@ import { Container, SectionHeading } from "@/components/ui/Container";
 import PageHero from "@/components/shared/PageHero";
 import PathwaySteps from "@/components/shared/PathwaySteps";
 import Button from "@/components/ui/Button";
+import JsonLd from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
+import { buildServiceJsonLd } from "@/lib/seo";
 import { Check, ClipboardList, LineChart, SearchCheck, Trophy, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Personal Training in Clarke Quay, Singapore",
+  title: "Personal Trainer Singapore | Clarke Quay",
   description:
-    "Individualised personal training for strength, muscle gain, fat loss and sports performance — built around your current capacity and goals, in Singapore.",
+    "Personal training in Clarke Quay, Singapore for strength, muscle gain, fat loss, body recomposition and sports performance. Train with NXS Collective.",
+  alternates: {
+    canonical: "/personal-training",
+  },
 };
+
+const personalTrainingJsonLd = buildServiceJsonLd({
+  name: "Personal Training at NXS Collective",
+  description:
+    "Individualised personal training for strength, muscle gain, fat loss, body recomposition and sports performance in Singapore.",
+  path: "/personal-training",
+  serviceType: "Personal Training",
+});
 
 const focusAreas = [
   "Strength development",
@@ -35,6 +48,8 @@ const pathway = [
 export default function PersonalTrainingPage() {
   return (
     <>
+      <JsonLd data={personalTrainingJsonLd} />
+
       <PageHero
         eyebrow="Personal Training"
         title="Personal Training at NXS Collective"
@@ -83,7 +98,13 @@ export default function PersonalTrainingPage() {
             and we&apos;ll recommend a suitable starting point.
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button href={siteConfig.booking.generalBookingUrl} external variant="primary">
+            <Button
+              href={siteConfig.booking.generalBookingUrl}
+              external
+              variant="primary"
+              analyticsEvent="personal_training_booking_click"
+              analyticsLabel="Personal Training Consultation"
+            >
               Book a Consultation
             </Button>
             <Button href="/contact" variant="secondary" showExternalIcon={false}>
