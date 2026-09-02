@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -8,32 +9,50 @@ const services = [
   {
     title: "Physiotherapy",
     index: "01",
+    pageHref: "/physiotherapy",
     image: "/images/physiotherapy/physio-consult-sketch.webp",
     objectPosition: "50% 43%",
     alt: "Physiotherapist treating a client at NXS Collective",
     description:
       "Clinical assessment and rehabilitation for musculoskeletal pain, injuries, movement limitations and post-operative recovery.",
-    cta: { label: "Book Physiotherapy", href: siteConfig.booking.physiotherapyBookingUrl, external: true },
+    cta: {
+      label: "Book Physiotherapy",
+      href: siteConfig.booking.physiotherapyBookingUrl,
+      external: true,
+      analyticsEvent: "physio_booking_click",
+    },
   },
   {
     title: "Sports Therapy",
     index: "02",
+    pageHref: "/sports-therapy",
     image: "/images/sports-therapy/sports-therapy-hero.webp",
     objectPosition: "50% 50%",
     alt: "Sports therapist performing manual therapy",
     description:
       "Hands-on therapy, mobility work and exercise-based rehabilitation to support recovery and physical function.",
-    cta: { label: "Explore Sports Therapy", href: "/sports-therapy", external: false },
+    cta: {
+      label: "Explore Sports Therapy",
+      href: "/sports-therapy",
+      external: false,
+      analyticsEvent: undefined,
+    },
   },
   {
     title: "Personal Training",
     index: "03",
+    pageHref: "/personal-training",
     image: "/images/personal-training/personal-training-female.webp",
     objectPosition: "50% 50%",
     alt: "Strength coach supervising controlled resistance training",
     description:
       "Individualised strength, body-composition and performance training based on your current capacity and goals.",
-    cta: { label: "Explore Personal Training", href: "/personal-training", external: false },
+    cta: {
+      label: "Explore Personal Training",
+      href: "/personal-training",
+      external: false,
+      analyticsEvent: undefined,
+    },
   },
 ];
 
@@ -67,7 +86,11 @@ export default function ServicesOverview() {
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-6 md:p-7">
-                <div className="flex items-start justify-between gap-4">
+                <Link
+                  href={service.pageHref}
+                  className="flex items-start justify-between gap-4"
+                  aria-label={`Explore ${service.title}`}
+                >
                   <h3 className="font-display text-xl font-semibold uppercase tracking-tight text-bone">
                     {service.title}
                   </h3>
@@ -75,7 +98,7 @@ export default function ServicesOverview() {
                     size={18}
                     className="mt-1 shrink-0 text-sand transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                   />
-                </div>
+                </Link>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-mist">{service.description}</p>
                 <Button
                   href={service.cta.href}
@@ -83,6 +106,8 @@ export default function ServicesOverview() {
                   variant="secondary"
                   className="mt-6 w-full"
                   showExternalIcon={false}
+                  analyticsEvent={service.cta.analyticsEvent}
+                  analyticsLabel={service.cta.label}
                 >
                   {service.cta.label}
                 </Button>
