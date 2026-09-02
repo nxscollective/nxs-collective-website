@@ -21,6 +21,8 @@ export default function FinalCTA() {
             href={getWhatsappUrl("Hi NXS Collective, I'd like some guidance on which service is right for me.")}
             external
             variant="secondary"
+            analyticsEvent="whatsapp_click"
+            analyticsLabel="Homepage Final CTA WhatsApp"
           >
             WhatsApp Us
           </Button>
