@@ -4,14 +4,28 @@ import PageHero from "@/components/shared/PageHero";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import TreatmentCard from "@/components/shared/TreatmentCard";
+import JsonLd from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
+import { buildServiceJsonLd } from "@/lib/seo";
+import Link from "next/link";
 import { Check, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sports Therapy in Clarke Quay, Singapore",
+  title: "Sports Therapy Singapore | Clarke Quay",
   description:
-    "Hands-on sports therapy, soft-tissue work and exercise-based rehabilitation to support recovery, mobility and physical function in Singapore.",
+    "Sports therapy in Clarke Quay, Singapore with hands-on soft-tissue work, mobility support and exercise-based rehabilitation for active individuals and everyday clients.",
+  alternates: {
+    canonical: "/sports-therapy",
+  },
 };
+
+const sportsTherapyJsonLd = buildServiceJsonLd({
+  name: "Sports Therapy at NXS Collective",
+  description:
+    "Hands-on sports therapy, soft-tissue work, mobility support and exercise-based rehabilitation in Singapore.",
+  path: "/sports-therapy",
+  serviceType: "Sports Therapy",
+});
 
 const treatments = [
   {
@@ -44,6 +58,8 @@ const suitedFor = [
 export default function SportsTherapyPage() {
   return (
     <>
+      <JsonLd data={sportsTherapyJsonLd} />
+
       <PageHero
         eyebrow="Sports Therapy"
         title="Sports Therapy at NXS Collective"
@@ -83,8 +99,11 @@ export default function SportsTherapyPage() {
           <p className="mt-9 max-w-2xl text-sm leading-relaxed text-mist">
             Sports therapy is a hands-on, exercise-based service and is not a
             substitute for a medical assessment or diagnosis. If you have an
-            unclear or ongoing medical concern, our physiotherapy service —
-            or your doctor — is the appropriate starting point.
+            unclear or ongoing medical concern, our{" "}
+            <Link href="/physiotherapy" className="transition-colors hover:text-bone">
+              physiotherapy service
+            </Link>{" "}
+            — or your doctor — is the appropriate starting point.
           </p>
         </Container>
       </section>
@@ -95,7 +114,13 @@ export default function SportsTherapyPage() {
             Ready to book a sports therapy session?
           </h2>
           <div className="mt-7 flex justify-center">
-            <Button href={siteConfig.booking.generalBookingUrl} external variant="primary">
+            <Button
+              href={siteConfig.booking.generalBookingUrl}
+              external
+              variant="primary"
+              analyticsEvent="sports_therapy_booking_click"
+              analyticsLabel="Sports Therapy Booking"
+            >
               Book Now
             </Button>
           </div>
