@@ -19,5 +19,5 @@ export function trackAnalyticsEvent(
   }
 
   window.dataLayer = window.dataLayer ?? [];
-  window.dataLayer.push({ event: eventName, ...params });
+  window.dataLayer.push(["event", eventName, params]);
 }
