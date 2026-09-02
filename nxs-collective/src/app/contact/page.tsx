@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with NXS Collective above Clarke Quay MRT, Singapore — book an appointment, send an enquiry or message us on WhatsApp.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -87,6 +90,8 @@ export default function ContactPage() {
                 external
                 variant="secondary"
                 className="flex-1"
+                analyticsEvent="whatsapp_click"
+                analyticsLabel="Contact Page WhatsApp"
               >
                 WhatsApp Us
               </Button>
