@@ -65,7 +65,13 @@ export default function MovementHealthcheck() {
               A comprehensive assessment combining objective strength testing and digital movement analysis to identify deficits, asymmetries, mobility restrictions and movement compensations.
             </p>
             <div className="mt-7">
-              <Button href={siteConfig.booking.movementHealthcheckBookingUrl} external variant="primary">
+              <Button
+                href={siteConfig.booking.movementHealthcheckBookingUrl}
+                external
+                variant="primary"
+                analyticsEvent="movement_healthcheck_booking_click"
+                analyticsLabel="Book Complete Healthcheck"
+              >
                 Book Complete Healthcheck
               </Button>
             </div>
@@ -105,6 +111,8 @@ export default function MovementHealthcheck() {
                     variant={tier.highlighted ? "primary" : "secondary"}
                     className="!mt-5 w-full !whitespace-normal !px-3 !py-2.5 text-center text-[11px] leading-snug uppercase tracking-wide"
                     showExternalIcon={false}
+                    analyticsEvent="movement_healthcheck_booking_click"
+                    analyticsLabel={tier.label}
                   >
                     {tier.label}
                   </Button>
