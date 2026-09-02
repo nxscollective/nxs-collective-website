@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Why NXS? | Our Approach to Movement Health",
   description:
     "Why NXS Collective connects physiotherapy, sports therapy and personal training into one assessment-led pathway, in Clarke Quay, Singapore.",
+  alternates: {
+    canonical: "/why-nxs",
+  },
 };
 
 const thinkingConcepts = [
