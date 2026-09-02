@@ -5,13 +5,26 @@ import { Container, SectionHeading } from "@/components/ui/Container";
 import PageHero from "@/components/shared/PageHero";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import TreatmentCard from "@/components/shared/TreatmentCard";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildServiceJsonLd } from "@/lib/seo";
 import { Check, Gauge } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Physiotherapy in Clarke Quay, Singapore",
+  title: "Physiotherapy Singapore | Clarke Quay",
   description:
-    "Clinical physiotherapy assessment and rehabilitation for musculoskeletal pain, injuries and post-operative recovery. Book directly through Mindbody.",
+    "Physiotherapy in Clarke Quay, Singapore for musculoskeletal pain, sports injuries, post-operative rehabilitation and return to activity. Book an assessment with NXS Collective.",
+  alternates: {
+    canonical: "/physiotherapy",
+  },
 };
+
+const physiotherapyJsonLd = buildServiceJsonLd({
+  name: "Physiotherapy at NXS Collective",
+  description:
+    "Clinical physiotherapy assessment and rehabilitation for musculoskeletal pain, injuries, post-operative recovery and return to activity in Singapore.",
+  path: "/physiotherapy",
+  serviceType: "Physiotherapy",
+});
 
 const conditions = [
   "Neck pain",
@@ -74,6 +87,8 @@ const appointmentIncludes = [
 export default function PhysiotherapyPage() {
   return (
     <>
+      <JsonLd data={physiotherapyJsonLd} />
+
       <PageHero
         eyebrow="Physiotherapy"
         title="Physiotherapy at NXS Collective"
