@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { CheckCircle2, AlertCircle } from "lucide-react";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 const SERVICE_OPTIONS = ["Physiotherapy", "Sports Therapy", "Personal Training"] as const;
 
@@ -84,6 +85,10 @@ export default function ContactForm() {
         return;
       }
 
+      trackAnalyticsEvent("contact_form_submit", {
+        services: values.services.join(", "),
+        page_path: window.location.pathname,
+      });
       setSubmitState("success");
       setValues(initialState);
     } catch {
