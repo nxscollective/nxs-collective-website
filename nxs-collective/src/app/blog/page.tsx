@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Blog | Physiotherapy, Rehabilitation & Performance",
   description:
     "Evidence-based insights from NXS Collective on physiotherapy, rehabilitation, movement health, strength and performance.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {
