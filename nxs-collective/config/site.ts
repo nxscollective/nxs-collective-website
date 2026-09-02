@@ -76,12 +76,30 @@ export const siteConfig = {
 
     address: "6 Eu Tong Sen Street, #10-17, SOHO1 @ The Central, Singapore 059817",
 
-    // Displayed on the Contact page and in the footer. Replace with your
-    // real opening hours once confirmed.
+    // Displayed on the Contact page and in the footer. The schema fields are
+    // read by the SEO layer only and do not change how these hours appear.
     operatingHours: [
-      { days: "Monday – Thursday", hours: "8:00 AM – 9:00 PM" },
-      { days: "Friday", hours: "Closed" },
-      { days: "Saturday – Sunday", hours: "8:00 AM – 6:00 PM" },
+      {
+        days: "Monday – Thursday",
+        hours: "8:00 AM – 9:00 PM",
+        schemaDays: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: "08:00",
+        closes: "21:00",
+      },
+      {
+        days: "Friday",
+        hours: "Closed",
+        schemaDays: ["Friday"],
+        opens: null,
+        closes: null,
+      },
+      {
+        days: "Saturday – Sunday",
+        hours: "8:00 AM – 6:00 PM",
+        schemaDays: ["Saturday", "Sunday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
     ],
 
     // Google Maps embed for the Contact page. This is built from the
