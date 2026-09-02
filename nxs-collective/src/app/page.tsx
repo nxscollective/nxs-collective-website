@@ -10,9 +10,14 @@ import WhoWeHelp from "@/components/home/WhoWeHelp";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Physiotherapy, Sports Therapy & Personal Training in Clarke Quay, Singapore",
+  title: {
+    absolute: "NXS Collective | Physiotherapy & Personal Training Singapore",
+  },
   description:
-    "NXS Collective offers integrated physiotherapy, sports therapy and personal training above Clarke Quay MRT — from clinical assessment to long-term performance.",
+    "Integrated physiotherapy, sports therapy and personal training above Clarke Quay MRT, Singapore — from clinical assessment and rehabilitation to strength and performance.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function HomePage() {
