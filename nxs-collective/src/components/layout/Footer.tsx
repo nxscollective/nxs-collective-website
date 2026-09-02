@@ -43,6 +43,8 @@ export default function Footer() {
                 href={getWhatsappUrl("Hi NXS Collective, I'd like to make an enquiry.")}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-event="whatsapp_click"
+                data-analytics-label="Footer WhatsApp"
                 className="flex items-center gap-2 hover:text-bone transition-colors"
               >
                 <MessageCircle size={15} strokeWidth={1.5} />
