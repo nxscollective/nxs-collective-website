@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
     "Terms and conditions governing physiotherapy, sports therapy, personal training and Movement Healthcheck services at NXS Collective, Singapore.",
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
 };
 
 export default function TermsAndConditionsPage() {
