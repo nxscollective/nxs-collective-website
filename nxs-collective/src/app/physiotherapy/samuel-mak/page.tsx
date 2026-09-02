@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { Container, SectionHeading } from "@/components/ui/Container";
+import JsonLd from "@/components/seo/JsonLd";
+import { samuelPersonJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Samuel Mak Han Wei | Physiotherapist at NXS Collective",
+  title: "Samuel Mak Han Wei | Physiotherapist Singapore",
   description:
-    "Meet Samuel Mak Han Wei, AHPC-registered physiotherapist and Clinical Director at NXS Collective in Clarke Quay, Singapore.",
+    "Meet Samuel Mak Han Wei, AHPC-registered physiotherapist and Clinical Director at NXS Collective in Clarke Quay, Singapore, with interests in racket-sport injuries, knee rehabilitation and spinal conditions.",
+  alternates: {
+    canonical: "/physiotherapy/samuel-mak",
+  },
 };
 
 const clinicalInterests = [
@@ -46,6 +51,8 @@ const approach = [
 export default function SamuelMakPage() {
   return (
     <>
+      <JsonLd data={samuelPersonJsonLd} />
+
       <section className="border-b border-hairline bg-ink pt-20">
         <Container className="grid min-h-[600px] items-stretch gap-0 px-0 md:grid-cols-[.92fr_1.08fr] md:px-10">
           <div className="relative min-h-[470px] overflow-hidden md:order-2 md:min-h-[600px]">
