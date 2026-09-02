@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How NXS Collective Pte Ltd collects, uses, discloses and protects personal data in accordance with Singapore's Personal Data Protection Act.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
