@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { Container, SectionHeading } from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import { getWhatsappUrl } from "@/config/site";
 import JsonLd from "@/components/seo/JsonLd";
 import { samuelPersonJsonLd } from "@/lib/seo";
 
@@ -47,6 +49,9 @@ const approach = [
     description: "Prepare you for everyday activity, exercise or sport.",
   },
 ];
+
+const complimentaryCallMessage =
+  "Hi NXS Collective, I would like to request a complimentary phone consultation with Samuel regarding my condition.";
 
 export default function SamuelMakPage() {
   return (
@@ -145,6 +150,39 @@ export default function SamuelMakPage() {
             </h2>
             <p className="mt-7 text-base leading-relaxed text-mist md:text-lg">
               What Samuel finds most rewarding about physiotherapy is seeing his clients return to the activities they enjoy. Whether that means returning to the tennis or badminton court, getting back into the gym, walking confidently after knee surgery, travelling comfortably, or simply managing everyday life without constantly being held back by pain, his goal is to help every client rebuild the confidence and physical capacity needed to move forward.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-hairline bg-graphite py-16 md:py-24">
+        <Container>
+          <div className="relative mx-auto max-w-5xl overflow-hidden border border-sand/30 bg-ink px-7 py-10 sm:px-10 md:px-14 md:py-14">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sand to-transparent" />
+            <div className="grid items-center gap-10 md:grid-cols-[1fr_auto] md:gap-14">
+              <div className="max-w-2xl">
+                <p className="eyebrow mb-5">Complimentary Phone Consultation</p>
+                <h2 className="font-display text-3xl font-semibold leading-tight text-bone md:text-4xl">
+                  Not Sure If Physiotherapy Is Right for You?
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-mist md:text-lg">
+                  Speak with Samuel through a complimentary physiotherapy phone consultation. Briefly share what you are experiencing, ask any initial questions and understand the most suitable next step for your recovery.
+                </p>
+              </div>
+
+              <div className="md:text-right">
+                <Button
+                  href={getWhatsappUrl(complimentaryCallMessage)}
+                  external
+                  className="w-full sm:w-auto"
+                >
+                  Request a Complimentary Call
+                </Button>
+              </div>
+            </div>
+
+            <p className="mt-9 border-t border-hairline pt-5 text-xs leading-relaxed text-silver md:mt-11">
+              The phone consultation is intended for initial guidance only and does not replace an in-person physiotherapy assessment or medical diagnosis.
             </p>
           </div>
         </Container>
