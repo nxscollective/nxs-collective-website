@@ -5,6 +5,8 @@ import { Container, SectionHeading } from "@/components/ui/Container";
 import PageHero from "@/components/shared/PageHero";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import TreatmentCard from "@/components/shared/TreatmentCard";
+import Button from "@/components/ui/Button";
+import { getWhatsappUrl } from "@/config/site";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildServiceJsonLd } from "@/lib/seo";
 import { Check, Gauge } from "lucide-react";
@@ -38,6 +40,9 @@ const conditions = [
   "Return to exercise",
   "Return to sport",
 ];
+
+const complimentaryCallMessage =
+  "Hi NXS Collective, I would like to request a complimentary phone consultation with Samuel regarding my condition.";
 
 const treatments = [
   {
@@ -139,16 +144,41 @@ export default function PhysiotherapyPage() {
 
       <section className="border-b border-hairline bg-graphite py-16 md:py-20">
         <Container>
-          <SectionHeading eyebrow="Who This Is For" title="Conditions we commonly work with" />
-          <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-            {conditions.map((item) => (
-              <li key={item} className="flex items-start gap-2.5 text-sm text-mist md:text-base">
-                <Check size={17} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sand" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <BookPhysioCTA className="mt-9" />
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(340px,1fr)] lg:gap-12">
+            <div className="lg:pr-2">
+              <SectionHeading eyebrow="Who This Is For" title="Conditions we commonly work with" />
+              <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+                {conditions.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-mist md:text-base">
+                    <Check size={17} strokeWidth={1.75} className="mt-0.5 shrink-0 text-sand" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <BookPhysioCTA className="mt-9" />
+            </div>
+
+            <aside className="relative self-start overflow-hidden border border-sand/30 bg-ink p-7 sm:p-9 lg:mt-1">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sand to-transparent" />
+              <p className="eyebrow mb-5">Complimentary Phone Consultation</p>
+              <h3 className="font-display text-2xl font-semibold leading-tight text-bone md:text-3xl">
+                Not Sure If Physiotherapy Is Right for You?
+              </h3>
+              <p className="mt-5 text-sm leading-relaxed text-mist md:text-base">
+                Speak with Samuel through a complimentary physiotherapy phone consultation. Briefly share what you are experiencing, ask any initial questions and understand the most suitable next step for your recovery.
+              </p>
+              <Button
+                href={getWhatsappUrl(complimentaryCallMessage)}
+                external
+                className="mt-7 w-full sm:w-auto lg:w-full"
+              >
+                Request a Complimentary Call
+              </Button>
+              <p className="mt-7 border-t border-hairline pt-5 text-xs leading-relaxed text-silver">
+                The phone consultation is intended for initial guidance only and does not replace an in-person physiotherapy assessment or medical diagnosis.
+              </p>
+            </aside>
+          </div>
         </Container>
       </section>
 
