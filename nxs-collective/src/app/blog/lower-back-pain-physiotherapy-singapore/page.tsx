@@ -338,9 +338,11 @@ export default function LowerBackPainArticlePage() {
                 </p>
                 <div className="my-9 border-l-2 border-sand bg-graphite px-6 py-7 md:px-8">
                   <p className="font-display text-xl font-semibold leading-8 text-bone">
-                    Instead of only asking “What did I damage?”, it can be more
-                    useful to ask “What changed recently, and what is my back
-                    struggling to tolerate?”
+                    <span className="text-bone">
+                      Instead of only asking “What did I damage?”, it can be more
+                      useful to ask “What changed recently, and what is my back
+                      struggling to tolerate?”
+                    </span>
                   </p>
                 </div>
               </section>
