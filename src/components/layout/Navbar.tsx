@@ -51,9 +51,9 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-9 lg:flex">
+        <ul className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(`${link.href}/`));
             return (
               <li key={link.href}>
                 <Link
