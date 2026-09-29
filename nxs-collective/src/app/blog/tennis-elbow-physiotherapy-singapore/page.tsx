@@ -131,6 +131,12 @@ const articleSchema = {
   ],
 };
 
+const lightArticleBand =
+  "relative isolate mt-16 scroll-mt-28 py-14 before:absolute before:inset-y-0 before:left-1/2 before:right-1/2 before:-z-10 before:-ml-[50vw] before:-mr-[50vw] before:border-y before:border-black/10 before:bg-[#f1efe9] [&_.eyebrow]:!text-[#8a6f50] [&_h2]:!text-ink [&_h3]:!text-ink [&_li]:!text-ink/75 [&_p]:!text-ink/75 [&_strong]:!text-ink [&_svg]:!text-[#8a6f50]";
+
+const graphiteArticleBand =
+  "relative isolate mt-16 scroll-mt-28 py-14 before:absolute before:inset-y-0 before:left-1/2 before:right-1/2 before:-z-10 before:-ml-[50vw] before:-mr-[50vw] before:border-y before:border-hairline before:bg-graphite";
+
 function BulletList({ items }: { items: string[] }) {
   return (
     <ul className="my-7 grid gap-3 sm:grid-cols-2">
@@ -204,7 +210,7 @@ export default function TennisElbowArticlePage() {
                 you back towards the activities you want to do.
               </p>
 
-              <section className="mt-16 scroll-mt-28" id="what-is-tennis-elbow">
+              <section className={lightArticleBand} id="what-is-tennis-elbow">
                 <p className="eyebrow mb-3">Understanding the condition</p>
                 <h2 className="font-display text-3xl font-semibold text-bone md:text-4xl">
                   What is tennis elbow?
@@ -288,7 +294,7 @@ export default function TennisElbowArticlePage() {
                 </p>
               </section>
 
-              <section className="mt-16 scroll-mt-28" id="racket-sports">
+              <section className={lightArticleBand} id="racket-sports">
                 <p className="eyebrow mb-3">Tennis & racket sports</p>
                 <h2 className="font-display text-3xl font-semibold text-bone md:text-4xl">
                   Why is tennis elbow common in tennis and racket sports?
@@ -370,7 +376,7 @@ export default function TennisElbowArticlePage() {
                 </div>
               </section>
 
-              <section className="mt-16 scroll-mt-28" id="treatment-options">
+              <section className={graphiteArticleBand} id="treatment-options">
                 <p className="eyebrow mb-3">Treatment options</p>
                 <h2 className="font-display text-3xl font-semibold text-bone md:text-4xl">
                   Where do dry needling, shockwave and manual therapy fit?
@@ -493,7 +499,7 @@ export default function TennisElbowArticlePage() {
                 </div>
               </section>
 
-              <section className="mt-16 scroll-mt-28" id="recovery-time">
+              <section className={lightArticleBand} id="recovery-time">
                 <p className="eyebrow mb-3">Recovery</p>
                 <h2 className="font-display text-3xl font-semibold text-bone md:text-4xl">
                   How long does tennis elbow take to recover?
