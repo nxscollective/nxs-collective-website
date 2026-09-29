@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
-import { getWhatsappUrl, siteConfig } from "@/config/site";
+import { getWhatsappUrl } from "@/config/site";
 
 const title = "Tennis Elbow Explained: Causes, Rehabilitation & Physiotherapy in Singapore";
 const description =
