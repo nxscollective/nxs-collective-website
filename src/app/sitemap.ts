@@ -9,13 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/physiotherapy",
     "/sports-therapy",
     "/personal-training",
+    "/blog",
+    "/blog/tennis-elbow-physiotherapy-singapore",
     "/contact",
   ];
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: route === "" ? 1 : 0.7,
+    changeFrequency: route.startsWith("/blog") ? "weekly" : "monthly",
+    priority: route === "" ? 1 : route.startsWith("/blog/") ? 0.8 : 0.7,
   }));
 }
