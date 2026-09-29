@@ -26,6 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      path: "/blog/lower-back-pain-physiotherapy-singapore",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { path: "/contact", changeFrequency: "monthly", priority: 0.6 },
     { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
     { path: "/terms-and-conditions", changeFrequency: "yearly", priority: 0.2 },

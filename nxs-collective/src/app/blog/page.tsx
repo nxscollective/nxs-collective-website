@@ -14,6 +14,17 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    href: "/blog/lower-back-pain-physiotherapy-singapore",
+    title: "Lower Back Pain Explained",
+    subtitle: "Causes, Exercise, Sciatica & Physiotherapy in Singapore",
+    excerpt:
+      "Lower back pain can appear after sitting, bending, lifting, training or sometimes without one obvious trigger. We explain why back pain does not always mean structural damage, when exercise is useful, how sciatica differs from general back pain, and when scans or urgent assessment may be appropriate.",
+    image:
+      "/images/blog/lower-back-pain/lower-back-pain-anatomy-nxs-collective.webp",
+    alt: "Rear-view lower back anatomy highlighting the lumbar pain region",
+    category: "Physiotherapy",
+  },
+  {
     href: "/blog/knee-pain-physiotherapy-singapore",
     title: "Knee Pain Explained",
     subtitle: "Causes, Exercise, Scans & Physiotherapy in Singapore",
