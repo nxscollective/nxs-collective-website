@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sports-therapy", changeFrequency: "monthly", priority: 0.8 },
     { path: "/why-nxs", changeFrequency: "monthly", priority: 0.7 },
     { path: "/physiotherapy/samuel-mak", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
+    {
+      path: "/blog/tennis-elbow-physiotherapy-singapore",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { path: "/contact", changeFrequency: "monthly", priority: 0.6 },
     { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
     { path: "/terms-and-conditions", changeFrequency: "yearly", priority: 0.2 },
