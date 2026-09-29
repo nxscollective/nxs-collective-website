@@ -14,6 +14,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    href: "/blog/knee-pain-physiotherapy-singapore",
+    title: "Knee Pain Explained",
+    subtitle: "Causes, Exercise, Scans & Physiotherapy in Singapore",
+    excerpt:
+      "Knee pain can come from many different sources — including the kneecap, osteoarthritis, tendons, a meniscus or simply a sudden increase in activity. We look at why knee pain develops, whether you should keep exercising, when scans are useful, and how physiotherapy can help rebuild strength and confidence.",
+    image: "/images/blog/knee-pain/knee-pain-anatomy-nxs-collective.webp",
+    alt: "Front-view knee anatomy highlighting the general knee pain region",
+    category: "Physiotherapy",
+  },
+  {
     href: "/blog/tennis-elbow-physiotherapy-singapore",
     title: "Tennis Elbow Explained",
     subtitle: "Causes, Rehabilitation & Physiotherapy in Singapore",
