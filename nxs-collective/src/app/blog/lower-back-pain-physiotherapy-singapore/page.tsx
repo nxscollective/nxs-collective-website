@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import JsonLd from "@/components/seo/JsonLd";
+import { siteUrl } from "@/lib/seo";
 import Button from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { getWhatsappUrl } from "@/config/site";
@@ -17,8 +18,7 @@ const image =
   "/images/blog/lower-back-pain/lower-back-pain-anatomy-nxs-collective.webp";
 
 export const metadata: Metadata = {
-  title:
-    "Lower Back Pain Physiotherapy Singapore | Sciatica, Exercise & Rehab | NXS Collective",
+  title: "Lower Back Pain Physiotherapy Singapore | Sciatica, Exercise & Rehab",
   description,
   keywords: [
     "lower back pain physiotherapy Singapore",
@@ -157,22 +157,22 @@ const articleSchema = {
   "@type": "Article",
   headline: title,
   description,
-  image: `https://nxscollective.net${image}`,
+  image: `${siteUrl}${image}`,
   datePublished: "2026-09-29",
   dateModified: "2026-09-29",
   author: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   publisher: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `https://nxscollective.net${canonical}`,
+    "@id": `${siteUrl}${canonical}`,
   },
   about: [
     "Lower back pain",

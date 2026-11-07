@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import JsonLd from "@/components/seo/JsonLd";
+import { siteUrl } from "@/lib/seo";
 import { getWhatsappUrl } from "@/config/site";
 
 const title = "Tennis Elbow Explained: Causes, Rehabilitation & Physiotherapy in Singapore";
@@ -112,16 +113,16 @@ const articleSchema = {
   author: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   publisher: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `https://nxscollective.net${canonical}`,
+    "@id": `${siteUrl}${canonical}`,
   },
   about: [
     "Tennis elbow",

@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import BookPhysioCTA from "@/components/shared/BookPhysioCTA";
 import JsonLd from "@/components/seo/JsonLd";
+import { siteUrl } from "@/lib/seo";
 import { getWhatsappUrl } from "@/config/site";
 
 const title = "Knee Pain Explained: Causes, Exercise, Scans & Physiotherapy in Singapore";
@@ -176,22 +177,22 @@ const articleSchema = {
   "@type": "Article",
   headline: title,
   description,
-  image: `https://nxscollective.net${image}`,
+  image: `${siteUrl}${image}`,
   datePublished: "2026-09-29",
   dateModified: "2026-09-29",
   author: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   publisher: {
     "@type": "Organization",
     name: "NXS Collective",
-    url: "https://nxscollective.net",
+    url: siteUrl,
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `https://nxscollective.net${canonical}`,
+    "@id": `${siteUrl}${canonical}`,
   },
   about: [
     "Knee pain",

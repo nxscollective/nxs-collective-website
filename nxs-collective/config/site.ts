@@ -22,7 +22,7 @@ export const siteConfig = {
   business: {
     name: "NXS Collective",
     legalName: "NXS Collective Pte Ltd",
-    domain: "nxscollective.net",
+    domain: "www.nxscollective.net",
     tagline: "Physiotherapy · Sports Therapy · Personal Training",
   },
 
