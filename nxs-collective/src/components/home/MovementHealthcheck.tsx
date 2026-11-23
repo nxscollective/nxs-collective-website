@@ -25,7 +25,7 @@ const tiers = [
     image: "/images/movement-health/strength-analysis.webp",
     alt: "Objective strength testing using force-plate equipment",
     label: "Book Strength Analysis",
-    href: siteConfig.booking.generalBookingUrl,
+    href: siteConfig.booking.strengthAnalysisBookingPath,
     highlighted: false,
   },
   {
@@ -35,7 +35,7 @@ const tiers = [
     image: "/images/movement-health/movement-analysis-sketch.webp",
     alt: "Digital motion-capture functional movement assessment",
     label: "Book Movement Analysis",
-    href: siteConfig.booking.generalBookingUrl,
+    href: siteConfig.booking.movementAnalysisBookingPath,
     highlighted: false,
   },
   {
@@ -45,7 +45,7 @@ const tiers = [
     image: "/images/movement-health/complete-healthcheck-consultation.webp",
     alt: "Coach and client reviewing complete movement healthcheck results",
     label: "Book Complete Healthcheck",
-    href: siteConfig.booking.movementHealthcheckBookingUrl,
+    href: siteConfig.booking.movementHealthcheckBookingPath,
     highlighted: true,
   },
 ];
@@ -66,8 +66,7 @@ export default function MovementHealthcheck() {
             </p>
             <div className="mt-7">
               <Button
-                href={siteConfig.booking.movementHealthcheckBookingUrl}
-                external
+                href={siteConfig.booking.movementHealthcheckBookingPath}
                 variant="primary"
                 analyticsEvent="movement_healthcheck_booking_click"
                 analyticsLabel="Book Complete Healthcheck"
@@ -107,7 +106,6 @@ export default function MovementHealthcheck() {
                   <p className="mt-3 text-sm leading-relaxed text-mist">{tier.description}</p>
                   <Button
                     href={tier.href}
-                    external
                     variant={tier.highlighted ? "primary" : "secondary"}
                     className="!mt-5 w-full !whitespace-normal !px-3 !py-2.5 text-center text-[11px] leading-snug uppercase tracking-wide"
                     showExternalIcon={false}

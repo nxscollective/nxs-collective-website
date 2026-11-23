@@ -17,8 +17,8 @@ const services = [
       "Clinical assessment and rehabilitation for musculoskeletal pain, injuries, movement limitations and post-operative recovery.",
     cta: {
       label: "Book Physiotherapy",
-      href: siteConfig.booking.physiotherapyBookingUrl,
-      external: true,
+      href: siteConfig.booking.physiotherapyBookingPath,
+      external: false,
       analyticsEvent: "physio_booking_click",
     },
   },

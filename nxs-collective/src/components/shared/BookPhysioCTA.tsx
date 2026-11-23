@@ -14,8 +14,7 @@ export default function BookPhysioCTA({
     <div className={className}>
       <p className="mb-3 text-sm text-mist">View Our Availability</p>
       <Button
-        href={siteConfig.booking.physiotherapyBookingUrl}
-        external
+        href={siteConfig.booking.physiotherapyBookingPath}
         variant="primary"
         className={buttonClassName}
         analyticsEvent="physio_booking_click"

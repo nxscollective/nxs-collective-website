@@ -31,30 +31,37 @@ export const siteConfig = {
    * ─────────────────────────────────────────────────────────────────────
    * Booking links for NXS Collective are configured below.
    * Every general "Book Now" / "Book an Appointment" button uses
-   * `generalBookingPath` and opens the embedded widget page. Buttons specific
-   * to a service keep their dedicated link so clients land on the correct
-   * Mindbody schedule.
+   * `generalBookingPath` and opens the embedded widget page. Service-specific
+   * buttons use their dedicated internal booking page and Mindbody widget.
    *
    * Where to get these links: log in to your Mindbody business dashboard →
    * Marketing → Widgets & Links (or Bookable Items) → copy the "Direct
    * link" for the relevant service or staff schedule.
    */
   booking: {
-    // Internal page containing the embedded Mindbody Appointments widget.
+    // Internal pages containing the embedded Mindbody Appointments widgets.
     generalBookingPath: "/book",
+    physiotherapyBookingPath: "/book/physiotherapy",
+    movementHealthcheckBookingPath: "/book/complete-movement-healthcheck",
+    strengthAnalysisBookingPath: "/book/strength-analysis",
+    movementAnalysisBookingPath: "/book/movement-analysis",
 
     // General "Book Now" button in the navigation bar and most CTAs.
     // Retained as a direct fallback if the embedded widget cannot load.
     generalBookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=5753749&stype=-9&sView=day&sLoc=1",
 
-    // Mindbody Branded Web Appointments widget shown on `/book`.
-    appointmentsWidgetId: "6b75000980e",
+    // Mindbody Branded Web Appointments widgets. Mindbody currently supplies
+    // the same ID for the general and initial physiotherapy booking flows.
+    appointmentsWidgetIds: {
+      general: "6b75000980e",
+      physiotherapy: "6b75000980e",
+      movementHealthcheck: "6b75006980e",
+      strengthAnalysis: "6b75005980e",
+      movementAnalysis: "6b75004980e",
+    },
 
-    // Used by every "Book Physiotherapy" button. Point this at Samuel's
-    // Mindbody staff schedule so clients see his real available times.
+    // Direct fallback links used if an embedded widget cannot load.
     physiotherapyBookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=5753749&stype=-9&sTG=4&sView=day&sLoc=1&sTrn=100000001",
-
-    // Used by the "Book Complete Healthcheck" button on the homepage.
     movementHealthcheckBookingUrl:
       "https://clients.mindbodyonline.com/classic/ws?studioid=5753749&stype=-9&sTG=7&sView=day&sLoc=1&sTrn=100000001",
   },
