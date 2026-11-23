@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import BookingPageView from "@/components/booking/BookingPageView";
-import { siteConfig } from "@/config/site";
+import GeneralBookingHub from "@/components/booking/GeneralBookingHub";
 
 export const metadata: Metadata = {
   title: "Book an Appointment",
@@ -11,13 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function BookPage() {
-  return (
-    <BookingPageView
-      titleLines={["Book Your", "Appointment"]}
-      description="Choose your service and view our current availability directly through Mindbody. Your booking is confirmed securely in real time."
-      widgetId={siteConfig.booking.appointmentsWidgetIds.general}
-      fallbackUrl={siteConfig.booking.generalBookingUrl}
-      whatsappMessage="Hi NXS Collective, I need some help choosing the right service before booking."
-    />
-  );
+  return <GeneralBookingHub />;
 }
