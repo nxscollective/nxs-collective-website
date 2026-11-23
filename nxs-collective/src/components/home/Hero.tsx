@@ -53,7 +53,7 @@ export default function Hero() {
             <MapPin size={16} strokeWidth={1.5} /> Directly above Clarke Quay MRT.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button href={siteConfig.booking.generalBookingUrl} external variant="primary">
+            <Button href={siteConfig.booking.generalBookingPath} variant="primary">
               Book an Appointment
             </Button>
             <Button href="#services" variant="secondary" showExternalIcon={false}>

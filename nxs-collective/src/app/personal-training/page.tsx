@@ -99,8 +99,7 @@ export default function PersonalTrainingPage() {
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
-              href={siteConfig.booking.generalBookingUrl}
-              external
+              href={siteConfig.booking.generalBookingPath}
               variant="primary"
               analyticsEvent="personal_training_booking_click"
               analyticsLabel="Personal Training Consultation"

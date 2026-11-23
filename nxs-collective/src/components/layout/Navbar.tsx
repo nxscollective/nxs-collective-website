@@ -73,8 +73,7 @@ export default function Navbar() {
 
         <div className="hidden lg:block">
           <Button
-            href={siteConfig.booking.generalBookingUrl}
-            external
+            href={siteConfig.booking.generalBookingPath}
             variant="primary"
             className="!px-6 !py-2.5 text-xs uppercase tracking-widest2"
             showExternalIcon={false}
@@ -114,8 +113,7 @@ export default function Navbar() {
           </ul>
           <div className="mt-4">
             <Button
-              href={siteConfig.booking.generalBookingUrl}
-              external
+              href={siteConfig.booking.generalBookingPath}
               variant="primary"
               className="w-full text-xs uppercase tracking-widest2"
               showExternalIcon={false}

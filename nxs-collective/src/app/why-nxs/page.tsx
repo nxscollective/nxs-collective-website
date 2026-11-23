@@ -133,7 +133,7 @@ export default function WhyNxsPage() {
             One team. One plan. Every stage of your progress.
           </h2>
           <div className="mt-8">
-            <Button href={siteConfig.booking.generalBookingUrl} external variant="primary">
+            <Button href={siteConfig.booking.generalBookingPath} variant="primary">
               Book an Appointment
             </Button>
           </div>

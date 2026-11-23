@@ -82,7 +82,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button href={siteConfig.booking.generalBookingUrl} external variant="primary" className="flex-1">
+              <Button href={siteConfig.booking.generalBookingPath} variant="primary" className="flex-1">
                 Book Now
               </Button>
               <Button

@@ -115,8 +115,7 @@ export default function SportsTherapyPage() {
           </h2>
           <div className="mt-7 flex justify-center">
             <Button
-              href={siteConfig.booking.generalBookingUrl}
-              external
+              href={siteConfig.booking.generalBookingPath}
               variant="primary"
               analyticsEvent="sports_therapy_booking_click"
               analyticsLabel="Sports Therapy Booking"

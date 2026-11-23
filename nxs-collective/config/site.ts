@@ -30,17 +30,25 @@ export const siteConfig = {
    * BOOKING LINKS
    * ─────────────────────────────────────────────────────────────────────
    * Booking links for NXS Collective are configured below.
-   * Every button labelled "Book Now" / "Book an Appointment" across the
-   * site uses `generalBookingUrl`. Buttons specific to a service use their
-   * own dedicated link so clients land on the correct Mindbody schedule.
+   * Every general "Book Now" / "Book an Appointment" button uses
+   * `generalBookingPath` and opens the embedded widget page. Buttons specific
+   * to a service keep their dedicated link so clients land on the correct
+   * Mindbody schedule.
    *
    * Where to get these links: log in to your Mindbody business dashboard →
    * Marketing → Widgets & Links (or Bookable Items) → copy the "Direct
    * link" for the relevant service or staff schedule.
    */
   booking: {
+    // Internal page containing the embedded Mindbody Appointments widget.
+    generalBookingPath: "/book",
+
     // General "Book Now" button in the navigation bar and most CTAs.
+    // Retained as a direct fallback if the embedded widget cannot load.
     generalBookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=5753749&stype=-9&sView=day&sLoc=1",
+
+    // Mindbody Branded Web Appointments widget shown on `/book`.
+    appointmentsWidgetId: "6b75000980e",
 
     // Used by every "Book Physiotherapy" button. Point this at Samuel's
     // Mindbody staff schedule so clients see his real available times.
