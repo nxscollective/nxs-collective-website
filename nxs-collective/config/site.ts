@@ -50,10 +50,9 @@ export const siteConfig = {
     // Retained as a direct fallback if the embedded widget cannot load.
     generalBookingUrl: "https://clients.mindbodyonline.com/classic/ws?studioid=5753749&stype=-9&sView=day&sLoc=1",
 
-    // Mindbody Branded Web Appointments widgets. Mindbody currently supplies
-    // the same ID for the general and initial physiotherapy booking flows.
+    // Mindbody Branded Web Appointments widgets.
     appointmentsWidgetIds: {
-      general: "6b75000980e",
+      general: "6b75050980e",
       physiotherapy: "6b75000980e",
       movementHealthcheck: "6b75006980e",
       strengthAnalysis: "6b75005980e",
